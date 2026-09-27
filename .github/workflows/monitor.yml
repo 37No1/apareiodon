@@ -1,0 +1,23 @@
+name: Fish Stock Monitor
+
+on:
+  schedule:
+    - cron: '*/30 * * * *' # 30分ごとに自動チェック
+  workflow_dispatch: # 手動でテスト実行するための設定
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4
+      - name: Run script
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python monitor.py
