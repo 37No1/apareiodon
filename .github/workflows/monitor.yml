@@ -2,7 +2,7 @@ name: Fish Stock Monitor
 
 on:
   schedule:
-    - cron: '*/15 * * * *' # 30分ごとに自動チェック
+    - cron: '*/15 * * * *' # 15分ごとに自動チェック
   workflow_dispatch: # 手動でテスト実行するための設定
 
 jobs:
