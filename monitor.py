@@ -29,4 +29,5 @@ def send_discord(msg):
         requests.post(DISCORD_WEBHOOK_URL, json={"content": f"@everyone 🐟 **入荷検知！**\n{msg}"})
 
 if __name__ == "__main__":
+    send_discord("📢 テスト通知：監視システムは正常に繋がっています！")
     check_stock()
