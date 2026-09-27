@@ -7,7 +7,7 @@ DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
 
 # 監視したいショップのリスト
 TARGET_SITES = [
-    {"name": "AquaFocus", "url": "https://aquafocus.base.shop/categories/5809345"},
+    {"name": "AquaFocus", "url": "https://aquafocus.base.shop/items/118850641"},
     {"name": "Aqua shop Flumen", "url": "https://aquashop-flumen.com/project/%E3%82%A2%E3%83%91%E3%83%AC%E3%82%A4%E3%82%AA%E3%83%89%E3%83%B3-%E3%83%9E%E3%82%AF%E3%83%AA%E3%82%B7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%B3%E3%83%81%E3%83%B3%E3%82%B95-6%E3%8E%9D/"},
     {"name": "アクアショップ魚力", "url": "https://a-uoriki.com/wp/13217/"},
 ]
